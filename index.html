@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paragraph Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Decorative background shapes -->
+  <span class="shape shape-1"></span>
+  <span class="shape shape-2"></span>
+
+  <div class="app">
+
+    <header class="header">
+      <span class="badge">✦ Writer's tool</span>
+      <h1 class="title">Paragraph <em>Generator</em></h1>
+      <p class="subtitle">Pick the number of paragraphs and get ready-to-use text.</p>
+    </header>
+
+    <main class="layout">
+
+      <!-- Controls column -->
+      <section class="panel controls">
+        <h2 class="panel-title">Settings</h2>
+
+        <label class="field-label" for="paragraph-count">Number of paragraphs</label>
+
+        <div class="stepper">
+          <button type="button" class="stepper-btn" id="decrease" aria-label="Decrease">−</button>
+          <input type="number" id="paragraph-count" value="2" min="1" max="20">
+          <button type="button" class="stepper-btn" id="increase" aria-label="Increase">+</button>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="generate-btn">
+          Generate text
+          <span class="btn-icon">→</span>
+        </button>
+
+        <div class="btn-row">
+          <button type="button" class="btn btn-ghost" id="copy-btn">Copy text</button>
+          <button type="button" class="btn btn-ghost" id="clear-btn">Clear</button>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong id="stat-paragraphs">0</strong>
+            <span>Paragraphs</span>
+          </div>
+          <div class="stat">
+            <strong id="stat-words">0</strong>
+            <span>Words</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Output column -->
+      <section class="panel paper">
+        <div class="paper-top">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="paper-name">Output</span>
+        </div>
+
+        <div class="output" id="output">
+          <!-- Empty-state message (hide it with JS by adding the class "hidden") -->
+          <div class="empty-state" id="empty-state">
+            <div class="empty-icon">✎</div>
+            <p>No text has been generated yet.</p>
+            <small>Click "Generate text" to start.</small>
+          </div>
+
+          <!-- Paragraphs are added here with JS, for example: -->
+          <!-- <p>Sample text...</p> -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Short message (e.g. after copying); add/remove the class "show" with JS -->
+  <div class="toast" id="toast">Copied ✓</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
