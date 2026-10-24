@@ -148,7 +148,6 @@ body {
   background: #fff;
   padding: 12px 0;
   outline: none;
-  -moz-appearance: textfield;
 }
 #paragraph-count::-webkit-outer-spin-button,
 #paragraph-count::-webkit-inner-spin-button { -webkit-appearance: none; }

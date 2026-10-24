@@ -32,7 +32,7 @@
 
         <div class="stepper">
           <button type="button" class="stepper-btn" id="decrease" aria-label="Decrease">−</button>
-          <input type="number" id="paragraph-count" value="2" min="1" max="20">
+          <input type="number" id="paragraph-count" value="" min="1" max="9">
           <button type="button" class="stepper-btn" id="increase" aria-label="Increase">+</button>
         </div>
 
@@ -66,15 +66,9 @@
         </div>
 
         <div class="output" id="output">
-          <!-- Empty-state message (hide it with JS by adding the class "hidden") -->
-          <div class="empty-state" id="empty-state">
-            <div class="empty-icon">✎</div>
-            <p>No text has been generated yet.</p>
-            <small>Click "Generate text" to start.</small>
-          </div>
-
           <!-- Paragraphs are added here with JS, for example: -->
           <!-- <p>Sample text...</p> -->
+           <div></div>
         </div>
       </section>
 
